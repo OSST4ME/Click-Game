@@ -3,27 +3,27 @@ import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
 import FriendCard from "./components/FriendCard";
 import Footer from "./components/Footer";
-import fish from "./fish.json";
+import tiger from "./tiger.json";
 import "./App.css";
 
 class App extends Component {
   state = {
-    fish,
-    clickedFish: [],
+    tiger,
+    clickedTiger: [],
     score: 0
   };
 
   imageClick = event => {
-    const currentFish = event.target.alt;
-    const FishAlreadyClicked =
-      this.state.clickedFish.indexOf(currentFish) > -1;
+    const currentTiger = event.target.alt;
+    const TigerAlreadyClicked =
+      this.state.clickedTiger.indexOf(currentTiger) > -1;
 
-    if (FishAlreadyClicked) {
+    if (TigerAlreadyClicked) {
       this.setState({
-        fish: this.state.fish.sort(function(a, b) {
+        tiger: this.state.tiger.sort(function(a, b) {
           return 0.5 - Math.random();
         }),
-        clickedFish: [],
+        clickedTiger: [],
         score: 0
       });
         alert("Sorry, You lose. Play again?");
@@ -31,11 +31,11 @@ class App extends Component {
     } else {
       this.setState(
         {
-          fish: this.state.fish.sort(function(a, b) {
+          tiger: this.state.tiger.sort(function(a, b) {
             return 0.5 - Math.random();
           }),
-          clickedFish: this.state.clickedFish.concat(
-            currentFish
+          clickedTiger: this.state.clickedTiger.concat(
+            currentTiger
           ),
           score: this.state.score + 1
         },
@@ -44,10 +44,10 @@ class App extends Component {
           if (this.state.score === 12) {
             alert("Good Job! You Win!");
             this.setState({
-              fish: this.state.fish.sort(function(a, b) {
+              tiger: this.state.tiger.sort(function(a, b) {
                 return 0.5 - Math.random();
               }),
-              clickedFish: [],
+              clickedTiger: [],
               score: 0
             });
           }
@@ -64,12 +64,12 @@ class App extends Component {
         />
         <Jumbotron />
         <div className="wrapper">
-          {this.state.fish.map(fish => (
+          {this.state.tiger.map(tiger => (
             <FriendCard
               imageClick={this.imageClick}
-              id={fish.id}
-              key={fish.id}
-              image={fish.image}
+              id={tiger.id}
+              key={tiger.id}
+              image={tiger.image}
             />
           ))}
         </div>

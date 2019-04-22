@@ -1,11 +1,11 @@
 .footer{
-	background-color: #490549;
+	background-color: #ebbf2e;
 	width: 100%;
 	position: relative;
 }
 
 .footer p{
-	color: white;
+	color: rgb(24, 8, 8);
 	text-align: center;
 	padding: 10px 0;
 	font-size: 15px;
