@@ -10,4 +10,4 @@ For this assignment, I created a memory game with React. This assignment will re
 
 6. Once the user's score is reset after an incorrect guess, the game should restart.
 
-This app was added to my Portfolio: 
+This app was added to my Portfolio: https://github.com/OSST4ME/Portfolio.osst4me.github.io
